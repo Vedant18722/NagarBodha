@@ -1,0 +1,11 @@
+{
+  "name": "URBNSYNC",
+  "description": "One City. Smarter Decisions. AI-powered smart city exploration, urban intelligence, and safer travel platform.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+
