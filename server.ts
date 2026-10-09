@@ -680,9 +680,13 @@ Do not invent unverified claims. Output plain text only.`;
 // --- VITE MIDDLEWARE (DEV) OR STATIC ASSETS (PROD) ---
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
+    process.env.DISABLE_HMR = 'true';
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: {
+        middlewareMode: true,
+        hmr: false,
+      },
       appType: 'spa'
     });
     app.use(vite.middlewares);
